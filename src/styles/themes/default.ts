@@ -1,21 +1,22 @@
 export const defaultTheme = {
   white: "#FFF",
 
-  "gray-100": "#E1E1E6",
-  "gray-300": "#C4C4CC",
-  "gray-400": "#8D8D99",
-  "gray-500": "#7C7C8A",
-  "gray-600": "#323238",
-  "gray-700": "#29292E",
-  "gray-800": "#202024",
-  "gray-900": "#121214",
+  "gray-000": "#FFFFFF",
+  "gray-100": "#FAFAFA",
+  "gray-200": "#F3F2F2",
+  "gray-300": "#EDEDED",
+  "gray-400": "#E6E5E5",
+  "gray-500": "#D7D5D5",
+  "gray-600": "#8D8686",
+  "gray-700": "#574F4D",
+  "gray-800": "#403937",
+  "gray-900": "#272221",
 
-  "green-300": "#00B37E",
-  "green-500": "#00875F",
-  "green-700": "#015F43",
+  "purple-100": "#EBE5F9",
+  "purple-300": "#8047F8",
+  "purple-700": "#4B2995",
 
-  "red-500": "#AB222E",
-  "red-700": "#7A1921",
-
-  "yellow-500": "#FBA94C"
+  "yellow-100": "#F1E9C9",
+  "yellow-300": "#DBAC2C",
+  "yellow-700": "#C47F17",
 }
