@@ -1,7 +1,17 @@
+import { useTheme } from "styled-components";
+import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
+
+import { InfoItem } from "../../../../components/InfoItem";
+
 import { InfosContainer, IntroContainer, IntroContent, IntroTitle } from "./styles";
 import { RegularText } from "../../../../styles/text";
 
+import imgIntro from "../../../../assets/img-intro.svg";
+
 export const Intro = () => {
+
+  const {colors} = useTheme();
+
   return (
     <IntroContainer>
       <IntroContent className="container">
@@ -15,7 +25,7 @@ export const Intro = () => {
               qualquer hora
             </RegularText>
           </section>
-          {/* <InfosContainer>
+          <InfosContainer>
             <InfoItem
               icon={<ShoppingCart weight="fill" />}
               text="Compra simples e segura"
@@ -36,9 +46,9 @@ export const Intro = () => {
               text="O café chega fresquinho até você"
               iconColor={colors["brand-purple"]}
             />
-          </InfosContainer> */}
+          </InfosContainer> 
         </div>
-        {/* <img src={IntroImg} /> */}
+        <img src={imgIntro} />
       </IntroContent>
     </IntroContainer>
   );
