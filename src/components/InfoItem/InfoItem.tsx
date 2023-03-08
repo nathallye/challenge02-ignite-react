@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { IconContainer, InfoItensConteiner } from "./styles";
+import { IconContainer, InfoItensContainer } from "./styles";
 import { RegularText } from "../../styles/text";
 
 
@@ -12,11 +12,11 @@ interface InfoItemProps {
 
 export function InfoItem({ icon, text, iconColor }: InfoItemProps) {
   return (
-    <InfoItensConteiner>
+    <InfoItensContainer>
       <IconContainer iconColor={iconColor}>{icon}</IconContainer>
       {typeof text === "string" ? (
         <RegularText color="text" size="m">{text}</RegularText>
       ) : (text)}
-    </InfoItensConteiner>
+    </InfoItensContainer>
   );
 }

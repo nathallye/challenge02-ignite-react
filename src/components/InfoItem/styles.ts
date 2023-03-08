@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InfoItensConteiner = styled.div`
+export const InfoItensContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -13,12 +13,16 @@ interface InfoItemProps {
 };
 
 export const IconContainer = styled.div<InfoItemProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: ${({ iconColor }) => iconColor };
   color: ${({theme}) => theme.colors["base-background"]};
   
   border-radius: 50%;
   
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   padding: 0.5rem;
 `;
