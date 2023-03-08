@@ -16,7 +16,7 @@ export const Header = () => {
         <HeaderButtonsContainer>
           <HeaderButton variant="purple">
             <MapPin size={20} weight="fill"/>
-            Campo Grande, MS
+            Macapá, AP {/*TODO: Verificar alguma lib que verifica a localização*/}
           </HeaderButton>
           <NavLink to="/Checkout">
             <HeaderButton variant="yellow">
