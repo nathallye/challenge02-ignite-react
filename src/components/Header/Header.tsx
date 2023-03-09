@@ -3,7 +3,7 @@ import { MapPin, ShoppingCart } from "phosphor-react";
 
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from "./styles";
 
-import logoCoffeeDelivery from "../../assets/logo-coffee-delivery.svg";
+import logoCoffeeDelivery from "/logo-coffee-delivery.svg";
 
 export const Header = () => {
   return (
