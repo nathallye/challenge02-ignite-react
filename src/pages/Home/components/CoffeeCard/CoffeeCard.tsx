@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ShoppingCart } from "phosphor-react";
 
 import { QuantitySelector } from "../../../../components/QuantitySelector";
@@ -19,6 +20,17 @@ interface CoffeeCardProps {
 };
 
 export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
+
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncrease = () => {
+
+  };
+
+  const handleDecrease = () => {
+
+  };
+
   return (
     <CoffeeCardContainer>
       <img src={`/${coffee.photo}`} />
