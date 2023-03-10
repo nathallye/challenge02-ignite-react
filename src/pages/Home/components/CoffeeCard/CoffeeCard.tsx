@@ -24,7 +24,7 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrease = () => {
-
+    
   };
 
   const handleDecrease = () => {
