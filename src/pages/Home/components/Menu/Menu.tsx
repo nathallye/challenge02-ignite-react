@@ -3,7 +3,7 @@ import { CoffeeCard } from "../CoffeeCard";
 import { CoffeeList, MenuContainer } from "./styles";
 import { TitleText } from "../../../../styles/text";
 
-import { coffeeList } from "../../../../data/coffee-list";
+import { data } from "./data";
 
 export const Menu = () => {
   return (
@@ -12,7 +12,7 @@ export const Menu = () => {
         Nossos cafés
       </TitleText>
       <CoffeeList>
-        {coffeeList.map((coffee) => {
+        {data.map((coffee) => {
           return(
             <CoffeeCard key={coffee.id} coffee={coffee} />
           )

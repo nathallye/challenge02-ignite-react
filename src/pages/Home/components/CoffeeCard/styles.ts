@@ -5,6 +5,7 @@ export const CoffeeCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 
   background-color: ${({theme}) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
