@@ -1,5 +1,7 @@
 import { ShoppingCart } from "phosphor-react";
 
+import { QuantitySelector } from "../../../../components/QuantitySelector";
+
 import { AddCartWrapper, CardFooter, CoffeeCardContainer, Tag } from "./styles";
 import { RegularText, TitleText } from "../../../../styles/text";
 
@@ -47,11 +49,11 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
           </TitleText>
         </div>
         <AddCartWrapper>
-          {/* <QuantitySelector 
+          <QuantitySelector 
             quantity={quantity} 
             onIncrease={handleIncrease}
             onDecrease={handleDecrease}
-          /> */}
+          />
           <button>
             <ShoppingCart weight="fill" size={22} />
           </button>
