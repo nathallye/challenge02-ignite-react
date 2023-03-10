@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface QuantitySelectorContainerProps {
-  size?: "small"| "medium",
+  size?: "small"| "medium"
 };
 
 export const QuantitySelectorContainer = styled.div<QuantitySelectorContainerProps>`
@@ -16,11 +16,9 @@ export const QuantitySelectorContainer = styled.div<QuantitySelectorContainerPro
   border-radius: 6px;
   height: 2.375rem;
 
-  input {
-    background: none;
+  span {
     color: ${({theme}) => theme.colors["base-title"]};
     
-    border: none;
     text-align: center;
     
     width: 100%;
@@ -46,9 +44,6 @@ export const SelectorButton = styled.button.attrs({
   background: none;
   color: ${({theme }) => theme.colors["brand-purple"]};
   border: none;
-  
-  width: 0.875rem;
-  height: 0.875rem;
   
   transition: 0.15s;
   

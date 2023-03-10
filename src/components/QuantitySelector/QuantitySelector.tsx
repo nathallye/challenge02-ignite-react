@@ -1,4 +1,5 @@
 import { Minus, Plus } from "phosphor-react";
+import { RegularText } from "../../styles/text";
 import { QuantitySelectorContainer, SelectorButton } from "./styles";
 
 interface QuantitySelectorProps {
@@ -15,11 +16,7 @@ export const QuantitySelector = ({ size = "medium", quantity, onIncrease, onDecr
         <Minus weight="bold" size={14} />
       </SelectorButton>
 
-      <input 
-        type="number" 
-        readOnly={true} 
-        value={quantity} 
-      />
+      <RegularText weight="bold">{quantity}</RegularText>
       
       <SelectorButton onClick={onIncrease}>
         <Plus weight="bold" size={14}/>
