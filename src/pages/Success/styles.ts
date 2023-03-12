@@ -36,7 +36,7 @@ export const OrderDetailsContainer = styled.div`
     border-radius: 7px 37px 7px 37px;
     
     position: absolute;
-    inset: -1px;
+    inset: -2px;
     z-index: -1;
   }
 `;
