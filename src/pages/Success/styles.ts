@@ -25,10 +25,10 @@ export const OrderDetailsContainer = styled.div`
   background: ${({ theme }) => theme.colors["base-background"]};
   border-radius: 6px 36px 6px 36px;
   
+  gap: 2rem;
   padding: 2.5rem;
   position: relative;
   min-width: 32rem;
-  gap: 2rem;
   
   &::before {
     content: "";
