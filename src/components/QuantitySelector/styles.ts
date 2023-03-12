@@ -12,7 +12,7 @@ export const QuantitySelectorContainer = styled.div<QuantitySelectorContainerPro
   
   background: ${({theme}) => theme.colors["base-button"]};
   
-  gap: 4px;
+  gap: 8px;
   border-radius: 6px;
   height: 2.375rem;
 

@@ -10,11 +10,11 @@ function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-        <BrowserRouter>
-          <Router /> 
-        </BrowserRouter>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;

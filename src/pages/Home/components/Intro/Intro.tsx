@@ -28,22 +28,22 @@ export const Intro = () => {
           <InfosContainer>
             <InfoItem
               icon={<ShoppingCart weight="fill" />}
-              text="Compra simples e segura"
+              content="Compra simples e segura"
               iconColor={colors["brand-yellow-dark"]}
             />
             <InfoItem
               icon={<Package weight="fill" />}
-              text="Embalagem mantém o café intacto"
+              content="Embalagem mantém o café intacto"
               iconColor={colors["base-text"]}
             />
             <InfoItem
               icon={<Timer weight="fill" />}
-              text="Entrega rápida e rastreada"
+              content="Entrega rápida e rastreada"
               iconColor={colors["brand-yellow"]}
             />
             <InfoItem
               icon={<Coffee weight="fill" />}
-              text="O café chega fresquinho até você"
+              content="O café chega fresquinho até você"
               iconColor={colors["brand-purple"]}
             />
           </InfosContainer> 

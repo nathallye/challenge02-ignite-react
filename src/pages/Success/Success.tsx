@@ -25,7 +25,7 @@ export const Success = () => {
           <InfoItem
             icon={<MapPin weight="fill" />}
             iconColor={colors["brand-purple"]}
-            text={
+            content={
               <RegularText>
                 Entrega em <strong> rua, numero </strong>
                 <br />
@@ -37,7 +37,7 @@ export const Success = () => {
           <InfoItem
             icon={<Clock weight="fill" />}
             iconColor={colors["brand-yellow"]}
-            text={
+            content={
               <RegularText>
                 Previsão de entrega
                 <br />
@@ -49,7 +49,7 @@ export const Success = () => {
           <InfoItem
             icon={<CurrencyDollar weight="fill" />}
             iconColor={colors["brand-yellow-dark"]}
-            text={
+            content={
               <RegularText>
                 Pagamento na entrega
                 <br />
