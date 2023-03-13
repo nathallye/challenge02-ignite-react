@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckoutForm } from "./components/CheckoutForm";
 
 import { CompleteOrderContainer } from "./styles";
+import { SelectedCoffees } from "./components/SelectedCoffees/SelectedCoffees";
 
 enum PaymentMethods {
   credit = "credit",
@@ -47,7 +48,7 @@ export const Checkout = () => {
       // onSubmit={handleSubmit(confirmOrderHandler)}
     >
       <CheckoutForm />
-      {/* <SelectedCoffees /> */}
+      <SelectedCoffees />
     </CompleteOrderContainer>
   </FormProvider>
   );

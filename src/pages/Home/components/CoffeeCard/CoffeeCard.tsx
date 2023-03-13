@@ -23,10 +23,12 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
 
   const [quantity, setQuantity] = useState(1);
 
+  // TODO
   const handleIncrease = () => {
     
   };
 
+  // TODO
   const handleDecrease = () => {
 
   };
@@ -56,6 +58,7 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
             R$
           </RegularText>
           <TitleText size="m" color="text" as="strong">
+            {/* TODO */}
             {/* {formatedPrice} */}
             9,99
           </TitleText>
