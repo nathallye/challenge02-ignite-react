@@ -48,7 +48,7 @@ export const Success = () => {
               <RegularText>
                 Entrega em <strong>{state.street}, {state.number}</strong>
                 <br />
-                {state.district} - {state.city}, {state.uf}
+                {state.neighborhood} - {state.city}, {state.uf}
               </RegularText>
             }
           />

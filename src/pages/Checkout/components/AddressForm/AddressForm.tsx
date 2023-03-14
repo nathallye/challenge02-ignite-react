@@ -13,9 +13,22 @@ interface ErrorsType {
 }
 
 export const AddressForm = () => {
-  const { register, formState } = useFormContext();
+  const { register, formState, setValue, setFocus } = useFormContext();
 
   const { errors } = formState as unknown as ErrorsType;
+
+  const checkCEP = (e: React.FocusEvent<HTMLInputElement>) => {
+    const cep = e.target.value.replace(/\D/g, "");
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
+      // console.log(data);
+      setValue("street", data.logradouro);
+      setValue("neighborhood", data.bairro);
+      setValue("city", data.localidade);
+      setValue("uf", data.uf);
+      setFocus("number");
+    });
+  }
 
   return (
     <AddressFormContainer>
@@ -25,6 +38,7 @@ export const AddressForm = () => {
         type="number"
         className="cep"
         {...register("cep")}
+        onBlur={checkCEP}
         error={errors.cep?.message}
       />
       <Input
@@ -48,15 +62,19 @@ export const AddressForm = () => {
       />
       <Input
         placeholder="Bairro"
-        {...register("district")}
-        error={errors.district?.message}
+        {...register("neighborhood")}
+        error={errors.neighborhood?.message}
       />
       <Input
         placeholder="Cidade"
         {...register("city")}
         error={errors.city?.message}
       />
-      <Input placeholder="UF" {...register("uf")} error={errors.uf?.message} />
+      <Input 
+        placeholder="UF" 
+        {...register("uf")} 
+        error={errors.uf?.message} 
+      />
     </AddressFormContainer>
   );
 };
