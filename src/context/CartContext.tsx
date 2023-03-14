@@ -100,5 +100,3 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
     </CartContext.Provider>
   );
 };
-
-
