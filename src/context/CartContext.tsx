@@ -21,9 +21,9 @@ interface CartContextProviderProps {
   children: ReactNode;
 };
 
-const COFFEE_ITEMS_STORAGE_KEY = "coffeeDelivery:cartItems"
+const COFFEE_ITEMS_STORAGE_KEY = "@coffee-Delivery:cart-items-state-v1.0.0";
   
-export const CartContext = createContext({} as CartContextType)
+export const CartContext = createContext({} as CartContextType);
 
 export const CartContextProvider = ({ children }: CartContextProviderProps) => {
 

@@ -1,15 +1,34 @@
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "styled-components";
 import { Clock, CurrencyDollar, MapPin } from "phosphor-react";
 
 import { InfoItem } from "../../components/InfoItem";
+import { OrderData } from "../Checkout/Checkout";
+import { paymentMethods } from "../Checkout/components/PaymentMethodOptions/PaymentMethodOptions";
 
 import { OrderDetailsContainer, SuccessContainer } from "./styles";
 import { RegularText, TitleText } from "../../styles/text";
 
 import successIllustration from "../../assets/success-illustration.svg";
 
+interface LocationType {
+  state: OrderData;
+}
+
 export const Success = () => {
   const { colors } = useTheme();
+
+  const { state } = useLocation() as unknown as LocationType;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!state) {
+      navigate("/");
+    }
+  }, []);
+
+  if (!state) return <></>;
 
   return (
     <SuccessContainer className="container">
@@ -27,9 +46,9 @@ export const Success = () => {
             iconColor={colors["brand-purple"]}
             content={
               <RegularText>
-                Entrega em <strong> rua, numero </strong>
+                Entrega em <strong>{state.street}, {state.number}</strong>
                 <br />
-                bairro - cidade, uf
+                {state.district} - {state.city}, {state.uf}
               </RegularText>
             }
           />
@@ -53,7 +72,7 @@ export const Success = () => {
               <RegularText>
                 Pagamento na entrega
                 <br />
-                <strong>método de pagamento</strong>
+                <strong>{paymentMethods[state.paymentMethod].label}</strong>
               </RegularText>
             }
           />
