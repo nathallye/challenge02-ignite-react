@@ -1,6 +1,7 @@
-import { ConfirmationSection } from "../ConfirmationSection";
-
 import { useCart } from "../../../../hooks/useCart";
+
+import { ConfirmationSection } from "../ConfirmationSection";
+import { CoffeeCartCard } from "../CoffeeCartCard";
 
 import { TitleText } from "../../../../styles/text";
 import { DetailsContainer, SelectedCoffeesContainer } from "./styles";
@@ -15,9 +16,9 @@ export const SelectedCoffees = () => {
       </TitleText>
 
       <DetailsContainer>
-        {/* {cartItems.map((item) => (
+        {cartItems.map((item) => (
           <CoffeeCartCard key={item.id} coffee={item} />
-        ))} */}
+        ))}
 
         <ConfirmationSection />
       </DetailsContainer>

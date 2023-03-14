@@ -27,11 +27,11 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
 
   const [quantity, setQuantity] = useState(1);
 
-  const handleIncrease = () => {
+  const increaseHandler = () => {
     setQuantity(state => state + 1);
   };
 
-  const handleDecrease = () => {
+  const decreaseHandler = () => {
     setQuantity(state => state - 1);
   };
 
@@ -80,8 +80,8 @@ export const CoffeeCard = ({coffee}: CoffeeCardProps) => {
         <AddCartWrapper>
           <QuantitySelector 
             quantity={quantity} 
-            onIncrease={handleIncrease}
-            onDecrease={handleDecrease}
+            onIncrease={increaseHandler}
+            onDecrease={decreaseHandler}
           />
           <button onClick={addToCartHandler}>
             <ShoppingCart weight="fill" size={22} />
