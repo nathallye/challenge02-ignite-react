@@ -1,5 +1,7 @@
-import produce from "immer";
 import { createContext, ReactNode, useEffect, useState } from "react";
+import { json } from "react-router-dom";
+import produce from "immer";
+
 import { Coffee } from "../pages/Home/components/CoffeeCard/CoffeeCard";
 
 export interface CartItem extends Coffee {
