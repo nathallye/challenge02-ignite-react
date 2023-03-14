@@ -6,8 +6,7 @@ import { TitleText } from "../../../../styles/text";
 import { DetailsContainer, SelectedCoffeesContainer } from "./styles";
 
 export const SelectedCoffees = () => {
-  // TODO
-  // const { cartItems } = useCart();
+  const { cartItems } = useCart();
 
   return (
     <SelectedCoffeesContainer>

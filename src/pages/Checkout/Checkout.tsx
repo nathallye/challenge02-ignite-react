@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useCart } from "../../hooks/useCart";
+
 import { CheckoutForm } from "./components/CheckoutForm";
+import { SelectedCoffees } from "./components/SelectedCoffees";
 
 import { CompleteOrderContainer } from "./styles";
-import { SelectedCoffees } from "./components/SelectedCoffees/SelectedCoffees";
 
 enum PaymentMethods {
   credit = "credit",
@@ -30,22 +33,36 @@ const confirmOrderFormValidationSchema = zod.object({
 
 export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
 
-type ConfirmOrderFormData = OrderData;
+type SuccessFormData = OrderData;
 
 export const Checkout = () => {
-  const confirmOrderForm = useForm<ConfirmOrderFormData>({
+  const confirmOrderForm = useForm<SuccessFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
     defaultValues: {
-      paymentMethod: undefined,
-    },
+      paymentMethod: undefined
+    }
   });
+
+  const { handleSubmit } = confirmOrderForm;
+
+  const navigate = useNavigate();
+  const { cleanCart } = useCart();
+
+  function successHandler(data: SuccessFormData) {
+    navigate("/Success", {
+      state: data
+    });
+
+    cleanCart();
+
+    // console.log(data);
+  }
 
   return (
     <FormProvider {...confirmOrderForm}>
     <CompleteOrderContainer
       className="container"
-      // TODO: 
-      // onSubmit={handleSubmit(confirmOrderHandler)}
+      onSubmit={handleSubmit(successHandler)}
     >
       <CheckoutForm />
       <SelectedCoffees />

@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { json } from "react-router-dom";
 import produce from "immer";
 
 import { Coffee } from "../pages/Home/components/CoffeeCard/CoffeeCard";
@@ -95,7 +94,7 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
   }, [cartItems]);
 
   return (
-    <CartContext.Provider value={{ cartItems, addCoffeeToCart, cartQuantity,changeCartItemQuantity, removeCartItem, cartItemsTotalPrice, cleanCart }}>
+    <CartContext.Provider value={{ cartItems, addCoffeeToCart, cartQuantity, changeCartItemQuantity, removeCartItem, cartItemsTotalPrice, cleanCart }}>
       {children}
     </CartContext.Provider>
   );

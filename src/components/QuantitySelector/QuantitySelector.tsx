@@ -1,6 +1,7 @@
 import { Minus, Plus } from "phosphor-react";
-import { RegularText } from "../../styles/text";
+
 import { QuantitySelectorContainer, SelectorButton } from "./styles";
+import { RegularText } from "../../styles/text";
 
 interface QuantitySelectorProps {
   size?: "small" | "medium",

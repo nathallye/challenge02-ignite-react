@@ -1,31 +1,34 @@
 import { BasicButton } from "../../../../components/BasicButton";
 
+import { useCart } from "../../../../hooks/useCart";
+
 import { formatMoney } from "../../../../utils/formatMoney";
 
 import { ConfirmationSectionContainer } from "./styles";
 import { RegularText } from "../../../../styles/text";
 
-export const ConfirmationSection = () => {
-  // TODO
-  // const { cartItemsTotalPrice, cartQuantity } = useCart();
-  // const cartTotal = DELIVERY_PRICE + cartItemsTotalPrice;
+const DELIVERY_PRICE = 4.5;
 
-  // const formattedItemsTotal = formatMoney(cartItemsTotalPrice);
-  // const formattedCartTotal = formatMoney(cartTotal);
-  // const formattedDeliveryPrice = formatMoney(DELIVERY_PRICE);
+export const ConfirmationSection = () => {
+  const { cartItemsTotalPrice, cartQuantity } = useCart();
+  const cartTotal = DELIVERY_PRICE + cartItemsTotalPrice;
+
+  const itemsTotalFormatted = formatMoney(cartItemsTotalPrice > 0 ? cartItemsTotalPrice : 0.00);
+  const cartTotalFormatted = formatMoney(cartTotal > 0 ? cartTotal : 0.00);
+  const deliveryPriceFormatted = formatMoney(DELIVERY_PRICE);
 
   return (
     <ConfirmationSectionContainer>
       <div>
         <RegularText size="s">Total de itens</RegularText>
         <RegularText>
-          {/* R$ {formattedItemsTotal} */}
+          R$ {itemsTotalFormatted}
         </RegularText>
       </div>
       <div>
         <RegularText size="s">Entrega</RegularText>
         <RegularText>
-          {/* R$ {formattedDeliveryPrice} */}
+          R$ {deliveryPriceFormatted}
         </RegularText>
       </div>
       <div>
@@ -33,13 +36,13 @@ export const ConfirmationSection = () => {
           Total
         </RegularText>
         <RegularText weight="700" color="subtitle" size="l">
-          {/* R$ {formattedCartTotal} */}
+          R$ {cartTotalFormatted}
         </RegularText>
       </div>
 
       <BasicButton
         content="Confirmar Pedido"
-        // disabled={cartQuantity <= 0}
+        disabled={cartQuantity <= 0}
         type="submit"
       />
     </ConfirmationSectionContainer>
