@@ -27,7 +27,7 @@ export const CheckoutForm = () => {
       <FormSectionContainer>
         <SectionTitle
           title="Pagamento"
-          subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
+          subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar."
           icon={<CurrencyDollar color={colors["brand-purple"]} size={22} />}
         />
         <PaymentMethodOptions />

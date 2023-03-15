@@ -22,6 +22,8 @@ export const IntroContainer = styled.section`
 
   width: 100%;
   height: 34rem;
+
+  
 `;
 
 export const IntroContent = styled.div`
@@ -30,10 +32,26 @@ export const IntroContent = styled.div`
   justify-content: space-between;
 
   gap: 3.5rem;
+
+  @media (max-width: 850px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    gap: 0;
+
+    img {
+      width: 50vw;
+    }
+  }
 `;
 
 export const IntroTitle = styled(TitleText)`
   margin-bottom: 1rem;
+
+  @media (max-width: 850px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const InfosContainer = styled.div`
@@ -44,4 +62,13 @@ export const InfosContainer = styled.div`
   width: 100%;
   margin-top: 4.125rem;
   row-gap: 1.25rem;
+
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
 `;

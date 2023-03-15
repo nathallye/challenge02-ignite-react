@@ -10,7 +10,7 @@ export const CoffeeCardContainer = styled.div`
   background-color: ${({theme}) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
   
-  width: 100%;
+  width: 15rem;
   padding: 1.25rem;
   padding-top: 0;
   text-align: center;
@@ -20,6 +20,11 @@ export const CoffeeCardContainer = styled.div`
     width: 7.5rem;
     margin-top: -1.25rem;
     margin-bottom: 0.75rem
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 1rem;
   }
 `;
 

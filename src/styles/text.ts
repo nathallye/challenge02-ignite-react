@@ -17,6 +17,10 @@ export const TitleText = styled.h1<TitleTextProps>`
   
   margin-top: ${({marginTop})=> [`${marginTop ?? 0}rem`]};
   margin-bottom: ${({marginBottom})=> [`${marginBottom ?? 0}rem`]};
+
+  @media (max-width: 850px) {
+    text-align: center;
+  }
 `;
 
 interface RegularTextProps {
@@ -36,4 +40,9 @@ export const RegularText = styled.p<RegularTextProps>`
   
   margin-top: ${({marginTop})=> [`${marginTop ?? 0}rem`]};
   margin-bottom: ${({marginBottom})=> [`${marginBottom ?? 0}rem`]};
+
+  @media (max-width: 850px) {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 `;

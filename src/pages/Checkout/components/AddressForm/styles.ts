@@ -11,6 +11,10 @@ export const AddressFormContainer = styled.div`
   .cep {
     grid-column: span 3;
     max-width: 12.5rem;
+
+    @media (max-width: 768px) {
+      max-width: unset;
+    }
   }
 
   .street {
@@ -19,5 +23,10 @@ export const AddressFormContainer = styled.div`
 
   .complement {
     grid-column: span 2;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;

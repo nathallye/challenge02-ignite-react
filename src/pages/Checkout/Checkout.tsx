@@ -60,13 +60,13 @@ export const Checkout = () => {
 
   return (
     <FormProvider {...confirmOrderForm}>
-    <CompleteOrderContainer
-      className="container"
-      onSubmit={handleSubmit(successHandler)}
-    >
-      <CheckoutForm />
-      <SelectedCoffees />
-    </CompleteOrderContainer>
-  </FormProvider>
+      <CompleteOrderContainer
+        className="container"
+        onSubmit={handleSubmit(successHandler)}
+      >
+        <CheckoutForm />
+        <SelectedCoffees />
+      </CompleteOrderContainer>
+    </FormProvider>
   );
 };

@@ -7,6 +7,11 @@ export const SelectedCoffeesContainer = styled.div`
 
   gap: 0.75rem;
   width: 40rem;
+  min-width: 300px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const DetailsContainer = styled(SectionBaseStyle)`

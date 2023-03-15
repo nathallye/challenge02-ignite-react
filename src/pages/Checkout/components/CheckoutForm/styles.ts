@@ -8,6 +8,10 @@ export const CompleteOrderFormContainer = styled.div`
 
   gap: 0.75rem;
   width: 40rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const FormSectionContainer = styled(SectionBaseStyle)`

@@ -6,12 +6,15 @@ export const MenuContainer = styled.section`
 `;
 
 export const CoffeeList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   
   row-gap: 2rem;
   column-gap: 2.5rem;
   
-  width: 100%;
   margin-top: 3.5rem;
+
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
 `;
