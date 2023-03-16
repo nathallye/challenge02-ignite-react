@@ -32,7 +32,6 @@ export const AddressForm = () => {
 
   return (
     <AddressFormContainer>
-      {/* TODO: Verificar lib que busca endereço pelo cep e fazer alto complete */}
       <Input
         placeholder="CEP"
         type="number"
