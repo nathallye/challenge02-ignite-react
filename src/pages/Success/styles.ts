@@ -21,6 +21,10 @@ export const SuccessContainer = styled.div`
       justify-content: center;
     }
   }
+
+  @media (max-width: 850px) {
+    text-align: center;
+  }
 `;
 
 export const OrderDetailsContainer = styled.div`
@@ -43,5 +47,9 @@ export const OrderDetailsContainer = styled.div`
     position: absolute;
     inset: -2px;
     z-index: -1;
+  }
+
+  @media (max-width: 850px) {
+    text-align: start;
   }
 `;
