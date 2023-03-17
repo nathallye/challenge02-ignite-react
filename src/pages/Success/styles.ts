@@ -15,6 +15,11 @@ export const SuccessContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 850px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 `;
 
