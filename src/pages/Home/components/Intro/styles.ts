@@ -23,7 +23,11 @@ export const IntroContainer = styled.section`
   width: 100%;
   height: 34rem;
 
-  
+  h3 {
+    @media (max-width: 850px) {
+      text-align: center;
+    }
+  }
 `;
 
 export const IntroContent = styled.div`
@@ -51,6 +55,7 @@ export const IntroTitle = styled(TitleText)`
 
   @media (max-width: 850px) {
     font-size: 1.8rem;
+    text-align: center;
   }
 `;
 
