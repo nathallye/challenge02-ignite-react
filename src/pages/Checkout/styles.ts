@@ -8,6 +8,12 @@ export const CompleteOrderContainer = styled.form`
   gap: 2rem;
   width: 100%;
 
+  h1 {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;

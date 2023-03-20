@@ -12,7 +12,7 @@ import logoCoffeeDelivery from "/logo-coffee-delivery.svg";
 export const Header = () => {
   const { cartQuantity } = useCart();
   
-  const [currentLocation, setCurrentLocation] = useState<{city: string, state: string}>({city: "Macapá", state: "AP"});
+  const [currentLocation, setCurrentLocation] = useState<{city: string, state: string}>({city: "Macapá", state: "Amapá"});
   
   useEffect(() => {
     if (navigator.geolocation) {
